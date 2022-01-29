@@ -1,0 +1,234 @@
+/*-----------
+home section
+------------*/
+.home-section{
+    position: relative;
+ }
+ .home-section .full-screen{
+    padding:50px 0;
+    min-height: 100vh;
+ }
+ .home-section .home-text,
+ .home-section .home-img{
+    flex:0 0 50%;
+    max-width: 50%;
+    padding:0 15px;
+ }
+ .home-section .home-text p{
+    color: var(--text-black-600);
+    font-size: 18px;
+    margin:0;
+ }
+ 
+ .home-section .home-text h2{
+    font-size: 55px;
+    font-weight: 700;
+    color: var(--skin-color);
+    margin:0;
+ }
+ .home-section .home-text h3{
+   font-size: 30px;
+   font-weight: 700;
+   color: var(--text-black-600);
+   margin:0;
+   text-align: center;
+}
+ .home-section .home-text h1{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-black-600);
+    margin:0;
+    text-transform: capitalize;
+ }
+ .home-section .home-text .btn-1{
+    margin-top: 30px;
+ }
+ .home-section .home-img .img-box{
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    margin:auto;
+    border-radius: 50%;
+    padding: 15px;
+ }
+ .home-section .home-img .img-box img{
+   width: 100%;
+   
+    border-radius: 100%;
+    border:10px solid transparent;
+ }
+
+
+
+ .contact-section .contact-form{
+   flex:0 0 100%;
+   max-width: 100%;
+   margin-top: 50px;
+}
+.contact-section .w-50{
+   padding:0 15px;
+   flex:0 0 50%;
+   max-width: 50%;
+}
+.contact-section .input-group{
+   margin:0 0 25px;
+   transition: all 0.3s ease;
+   border-radius: 30px;
+}
+.contact-section .input-group:after{
+   border-radius: 30px;
+}
+.contact-section .input-group .input-control{
+   height: 45px;
+   display: block;
+   width: 100%;
+   border-radius: 30px;
+   border:none;
+   background-color: transparent;
+   font-size: 16px;
+   padding:0 15px;
+   color: var(--text-black-700);
+}
+.contact-section .input-group textarea.input-control{
+   height: 184px;
+   padding-top: 15px;
+   resize: none;
+}
+.contact-section .submit-btn{
+   flex:0 0 100%;
+   max-width: 100%;
+   text-align: right;
+   padding:0 15px;
+}
+
+
+.social-menu ul {
+   position: absolute;
+   top: 95%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   padding: 0;
+   margin: 0;
+   display: flex;
+}
+.social-menu ul li {
+   list-style: none;
+   margin: 0 10px;
+   text-align: center;
+}
+
+.social-menu ul li i{
+   
+   font-size: 25px;
+}
+.social-menu ul li .fa:hover {
+   color: #ffffff;
+}
+.social-menu ul li a {
+   display: inline-block;
+   font-size: 28px;
+   font-weight: 600;
+   color: var(--text-black-900);
+   padding: 5px 30px;
+   text-transform: capitalize;
+   border-radius: 30px;
+   transition: all 0.3s ease;
+}
+.social-menu ul li a:hover {
+   transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.social-menu ul li:nth-child(1) a:hover {
+   background-color: #3b5999;
+}
+.social-menu ul li:nth-child(2) a:hover {
+   background-color: #55acee;
+}
+.social-menu ul li:nth-child(3) a:hover {
+   background-color: #e4405f;
+}
+.social-menu ul li:nth-child(4) a:hover {
+   background-color: #5BC236;
+}
+
+
+/*-----------
+pop up
+------------*/
+ *, *::after, *::before {
+   box-sizing: border-box;
+ }
+ 
+ .modal {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%) scale(0);
+   transition: 200ms ease-in-out;
+   border: 1px solid black;
+   border-radius: 15px;
+   z-index: 10;
+   background-color: var(--bg-black-100);
+   width: 600px;
+   max-width: 80%;
+ }
+ 
+ .modal.active {
+   transform: translate(-50%, -50%) scale(1);
+ }
+ 
+ .modal-header {
+   padding: 10px 15px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-bottom: 1px solid --bg-black-600;
+ }
+ 
+ .modal-header .title {
+   font-size: 1.25rem;
+   font-weight: bold;
+ }
+ 
+ .modal-header .close-button {
+   cursor: pointer;
+   border: none;
+   outline: none;
+   background: none;
+   font-size: 2rem;
+   font-weight: bold;
+   color: var(--text-black-900);
+ }
+ 
+ .modal-body {
+   padding: 10px 15px;
+ }
+ 
+ #overlay {
+   position: fixed;
+   opacity: 0;
+   transition: 200ms ease-in-out;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(0, 0, 0, .2);
+   pointer-events: none;
+ }
+ .google-maps {
+   position: relative;
+   padding-bottom: 75%; 
+   height: 0;
+   overflow: hidden;
+}
+.google-maps iframe {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100% ;
+   height: 100%;
+}
+ #overlay.active {
+   opacity: 1;
+   pointer-events: all;
+ }
+ 
